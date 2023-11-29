@@ -46,12 +46,22 @@ class Hello {
     // System.out.println(num);
     // System.out.println(result);
 
-    int x = 6;
-    int y = 7;
-    int a = 5;
-    int b = 9;
-    boolean result = x > y && a < b;
-    System.out.println(result);
+    // int x = 6;
+    // int y = 7;
+    // int a = 5;
+    // int b = 9;
+    // boolean result = x > y && a < b;
 
+    int x = 15;
+    int y = 20;
+    int z = 11;
+
+    if (x > y) {
+      System.out.println(x);
+    } else if (y > z) {
+      System.out.println(y);
+    } else {
+      System.out.println(z);
+    }
   }
 }
