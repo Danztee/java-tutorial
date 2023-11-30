@@ -52,16 +52,54 @@ class Hello {
     // int b = 9;
     // boolean result = x > y && a < b;
 
-    int x = 15;
-    int y = 20;
-    int z = 11;
+    // int x = 15;
+    // int y = 20;
+    // int z = 11;
 
-    if (x > y) {
-      System.out.println(x);
-    } else if (y > z) {
-      System.out.println(y);
-    } else {
-      System.out.println(z);
-    }
+    // if (x > y) {
+    //   System.out.println(x);
+    // } else if (y > z) {
+    //   System.out.println(y);
+    // } else {
+    //   System.out.println(z);
+    // }
+
+    // int n = 4;
+    // int result = 0;
+
+    // result = n % 2 == 0 ? 1 : 0;
+    // System.out.println(result);
+
+    // int n = 3;
+
+    // switch (n) {
+    //   case 1:
+    //     System.out.println("Monday");
+    //     break;
+    //   case 2:
+    //     System.out.println("Tuesday");
+    //     break;
+    //   case 3:
+    //     System.out.println("Wednesday");
+    //     break;
+    //   case 4:
+    //     System.out.println("Thursday");
+    //     break;
+    //   case 5:
+    //     System.out.println("Friday");
+    //     break;
+    // }
+
+    String day = "Sunday";
+    String result = "";
+
+    result =
+      switch (day) {
+        case "Saturday", "Sunday" -> "6am";
+        case "Monday" -> "8am";
+        default -> "7am";
+      };
+
+    System.out.println(result);
   }
 }
