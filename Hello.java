@@ -90,16 +90,41 @@ class Hello {
     //     break;
     // }
 
-    String day = "Sunday";
-    String result = "";
+    // String day = "Sunday";
+    // String result = "";
 
-    result =
-      switch (day) {
-        case "Saturday", "Sunday" -> "6am";
-        case "Monday" -> "8am";
-        default -> "7am";
-      };
+    // result =
+    //   switch (day) {
+    //     case "Saturday", "Sunday" -> "6am";
+    //     case "Monday" -> "8am";
+    //     default -> "7am";
+    //   };
 
-    System.out.println(result);
+    // System.out.println(result);
+
+    // int i = 1;
+
+    // while (i <= 4) {
+    //   System.out.println("Hi " + i);
+    //   int j = 1;
+    //   while (j < 3) {
+    //     System.out.println("Hello" + j);
+    //     j++;
+    //   }
+    //   i++;
+    // }
+    // System.out.println("Bye " + i);
+
+    // do {
+    //   System.out.println("Executing");
+    // } while (i > 5);
+
+    for (int i = 1; i <= 7; i++) {
+      System.out.println("DAY " + i);
+
+      for (int j = 1; j <= 7; j++) {
+        System.out.println(i + 5);
+      }
+    }
   }
 }
