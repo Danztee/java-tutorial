@@ -132,26 +132,63 @@
 
 // INTERMEDIATE JAVA
 
+// class Calculator {
+
+//   int a;
+
+//   public int add(int n1, int n2) {
+//     int r = n1 + n2;
+//     return r;
+//   }
+// }
+
+// class Computer {
+
+//   public void playMusic() {
+//     System.out.println("music playing");
+//   }
+
+//   public String getMeAPen(int cost) {
+//     if (cost >= 10) return "pen"; else return "no enough money to buy";
+//   }
+// }
+
 class Calculator {
 
-  int a;
+  public int add(int n1, int n2, int n3) {
+    return n1 + n2 + n3;
+  }
 
   public int add(int n1, int n2) {
-    int r = n1 + n2;
-    return r;
+    return n1 + n2;
+  }
+
+  public double add(double n1, int n2) {
+    return n1 + n2;
   }
 }
 
 public class Hello {
 
+  // public static void main(String a[]) {
+  //   int num1 = 4;
+  //   int num2 = 5;
+
+  //   Calculator calc = new Calculator();
+  //   int result = calc.add(num1, num2);
+  //   // int result = num1 + num2;
+
+  //   System.out.println(result);
+  // }
+
   public static void main(String a[]) {
-    int num1 = 4;
-    int num2 = 5;
+    // Computer obj = new Computer();
+    // obj.playMusic();
+    // String str = obj.getMeAPen(8);
+    // System.out.println(str);
 
-    Calculator calc = new Calculator();
-    int result = calc.add(num1, num2);
-    // int result = num1 + num2;
-
-    System.out.println(result);
+    Calculator obj = new Calculator();
+    int r1 = obj.add(5, 30);
+    System.out.println(r1);
   }
 }
