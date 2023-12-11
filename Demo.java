@@ -1,33 +1,44 @@
-class Human {
+// class Human {
 
-  public Human() {
-    System.err.println("in constructor");
+//   public Human() {
+//     System.err.println("in constructor");
+//   }
+
+//   private String name = "Daniel";
+//   private int age = 20;
+
+//   public int getAge() {
+//     return age;
+//   }
+
+//   public String getName() {
+//     return name;
+//   }
+
+//   public void setAge(int age) {
+//     this.age = age;
+//   }
+
+//   public void setName(String name) {
+//     this.name = name;
+//   }
+// }
+
+class Calc {
+
+  public int add(int n1, int n2) {
+    return n1 + n2;
   }
 
-  private String name = "Daniel";
-  private int age = 20;
-
-  public int getAge() {
-    return age;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setAge(int age) {
-    this.age = age;
-  }
-
-  public void setName(String name) {
-    this.name = name;
+  public int sub(int n1, int n2) {
+    return n1 - n2;
   }
 }
 
 public class Demo {
 
   public static void main(String[] args) {
-    Human obj = new Human();
+    // Human obj = new Human();
     // obj.name = "Daniel";
     // obj.age = 22;
     // System.out.println(obj.getName());
