@@ -24,20 +24,33 @@
 //   }
 // }
 
-class Calc {
+class A {
 
-  public int add(int n1, int n2) {
-    return n1 + n2;
+  public void show() {
+    System.out.println("in show");
   }
 
-  public int sub(int n1, int n2) {
-    return n1 - n2;
+  public void config() {
+    System.out.println("in config");
+  }
+}
+
+class B extends A {
+
+  public void showOne() {
+    System.out.println("in B show");
   }
 }
 
 public class Demo {
 
   public static void main(String[] args) {
+    A obj = new A();
+    obj.show();
+    // System.out.println(res);
+    // VeryAdvCalc obj = new VeryAdvCalc();
+    // double result = obj.power(2, 8);
+    // System.out.println(result);
     // Human obj = new Human();
     // obj.name = "Daniel";
     // obj.age = 22;
