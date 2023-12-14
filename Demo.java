@@ -1,3 +1,5 @@
+// import other.*;
+
 // class Human {
 
 //   public Human() {
@@ -24,29 +26,45 @@
 //   }
 // }
 
+// class A {
+
+//   public void show() {
+//     System.out.println("in show");
+//   }
+
+//   public void config() {
+//     System.out.println("in config");
+//   }
+// }
+
+// class B extends A {
+
+//   public void showOne() {
+//     System.out.println("in B show");
+//   }
+// }
+
 class A {
 
-  public void show() {
-    System.out.println("in show");
-  }
-
-  public void config() {
-    System.out.println("in config");
+  public void show1() {
+    System.out.println("show one A");
   }
 }
 
 class B extends A {
 
-  public void showOne() {
-    System.out.println("in B show");
+  public void show2() {
+    System.out.println("show two B");
   }
 }
 
 public class Demo {
 
   public static void main(String[] args) {
-    A obj = new A();
-    obj.show();
+    int num = 7;
+    // final int num = 5;
+    // A obj = (A) new B();
+    // obj.show1();
     // System.out.println(res);
     // VeryAdvCalc obj = new VeryAdvCalc();
     // double result = obj.power(2, 8);
