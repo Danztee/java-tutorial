@@ -56,37 +56,74 @@
 //   };
 // }
 
-interface X {}
+// interface X {}
 
-interface Y {}
+// interface Y {}
 
-enum Status {
-  Running,
-  Failed,
-  Pending,
-  Success,
+// enum Status {
+//   Running,
+//   Failed,
+//   Pending,
+//   Success,
+// }
+
+// class A {
+
+//   public void showTheDataWhichBelongsToThisClass() {
+//     System.err.println("showing from A.....");
+//   }
+// }
+
+// class B extends A {
+
+//   @Override
+//   public void showTheDataWhichBelongsToThisClass() {
+//     System.err.println("showing from B.....");
+//   }
+// }
+
+@FunctionalInterface
+interface A {
+  int add(int i, int j);
+  // void run();
 }
 
 public class Demo {
 
   public static void main(String[] args) {
-    Status s = Status.Pending;
-    if (s == Status.Running) {
-      System.out.println("All Good");
-    } else if (s == Status.Pending) {
-      System.out.println("Please Wait");
-    }
+    A obj = (int i, int j) -> i + j;
 
-    switch (s) {
-      case Running:
-        System.out.println("All Good");
-        break;
-      case Pending:
-        System.out.println("Loading");
-        break;
-      default:
-        break;
-    }
+    int result = obj.add(1, 2);
+    System.err.println(result);
+    // A obj = i -> {
+    //   System.out.println("in show" + " " + i);
+    // };
+    // obj.show(4);
+    // A obj = new A() {
+    //   public void show() {
+    //     System.out.println("in show");
+    //   }
+    // };
+
+    // B obj = new B();
+    // obj.showTheDataWhichBelongsToThisClass();
+    // Status s = Status.Pending;
+    // if (s == Status.Running) {
+    //   System.out.println("All Good");
+    // } else if (s == Status.Pending) {
+    //   System.out.println("Please Wait");
+    // }
+
+    // switch (s) {
+    //   case Running:
+    //     System.out.println("All Good");
+    //     break;
+    //   case Pending:
+    //     System.out.println("Loading");
+    //     break;
+    //   default:
+    //     break;
+    // }
     // int a = 3;
     // Status[] ss = Status.values();
 
