@@ -1,32 +1,39 @@
-class DanielException extends Exception {
-
-  public DanielException(String string) {
-    super(string);
-  }
-}
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Demo {
 
-  public static void main(String[] args) {
-    int i = 20;
-    int j = 0;
+  public static void main(String[] args) throws IOException {
+    // System.out.println("Enter a number");
 
-    // int nums = new int[5];
+    // InputStreamReader in = new InputStreamReader(System.in);
+    // BufferedReader bf = new BufferedReader(in);
+    // int num = Integer.parseInt(bf.readLine());
+
+    // Scanner SC = new Scanner(System.in);
+    // int num = SC.nextInt();
+
+    // System.out.println(num);
+
+    // bf.close();
+
+    int j = 0;
+    int i = 0;
+
+    BufferedReader br = null;
 
     try {
-      j = 18 / i;
-      // System.out.println(nums[1]);
-      // System.out.println(nums[5]);
-
-      if (j == 0) throw new DanielException("HEy from daniel exception");
-    } catch (DanielException e) {
-      // TODO: handle exception
-      System.out.println("something went wrong" + e);
+      InputStreamReader in = new InputStreamReader(System.in);
+      br = new BufferedReader(in);
+      int num = Integer.parseInt(br.readLine());
+      System.out.println(num);
     } catch (Exception e) {
       // TODO: handle exception
       System.out.println("something went wrong");
+    } finally {
+      System.out.println("bye");
+      br.close();
     }
-
-    System.out.println(j);
   }
 }
