@@ -1,52 +1,51 @@
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
 
+/**
+ * Demo
+ */
 public class Demo {
 
   public static void main(String[] args) {
-    // Set<Integer> nums = new HashSet<Integer>();
-    // nums.add(6);
-    // nums.add(5);
-    // nums.add(4);
+    List<Integer> nums = Arrays.asList(4, 5, 6, 7);
 
-    // System.out.println(nums.get(2));
+    // Stream<Integer> s1 = nums.stream();
+    // Stream<Integer> s2 = s1.filter(n -> n % 2 == 0);
+    // Stream<Integer> s3 = s2.map(n -> n * 2);
 
-    // for (int n : nums) {
-    //   System.out.println(n);
-    // }
+    // int result = s3.reduce(0, (c, e) -> c + e);
+    // System.err.println(result);
 
-    // Map<String, Integer> students = new HashMap<>();
-    // students.put("Daniel", 25);
-    // students.put("King", 15);
-    // students.put("Bolu", 30);
-    // students.put("kira", 70);
+    int result = nums
+      .stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .reduce(0, (c, e) -> c + e);
 
-    // for (String key : students.keySet()) {
-    //   System.out.println(key + " " + students.get(key));
-    // }
+    System.err.println(result);
+    //
+    // s3.forEach(n -> System.err.println(n));
+    //     int sum = 0;
+    //     for (int n : nums) {
+    //       if (n % 2 == 0) {
+    //         n = n * 2;
+    //         sum = sum + n;
+    //       }
+    //     }
 
-    Comparator<Integer> com = new Comparator<>() {
-      public int compare(Integer i, Integer j) {
-        if (i % 10 > j % 10) {
-          return 1;
-        } else {
-          return -1;
-        }
-      }
-    };
+    // System.out.println(sum);
 
-    List<Integer> nums = new ArrayList<>();
-    nums.add(23);
-    nums.add(12);
-    nums.add(76);
+    // nums.forEach(n -> System.err.println(n));
 
-    Collections.sort(nums, com);
+    // Consumer<Integer> con = new Consumer<Integer>() {
+    //   public void accept(Integer n) {
+    //     System.out.println(n);
+    //   }
+    // };
 
-    System.out.println(nums);
+    // nums.forEach(con);
   }
 }
